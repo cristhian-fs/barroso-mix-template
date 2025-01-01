@@ -14,18 +14,19 @@
 /* ----------------- Colors ----------------- */
 
 :root{
-  --white: hsla(0, 0%, 100%, 1); /* Used for background, texts and icons*/
-  --black: hsla(0, 0%, 0%, 1); /* Used for texts, button backgrounds and texts  */
-  --brand-blue: hsla(203, 100%, 38%, 1); /* Used for background, buttons and icons */
-  --brand-yellow: hsla(43, 100%, 50%, 1); /* Used to highlight texts, buttons and active states */
+  /* hsl pure values for all of them */
+  --white: 0, 0%, 100%; /* Used for background, texts and icons*/
+  --black: 0, 0%, 0%; /* Used for texts, button backgrounds and texts  */
+  --brand-blue: 203, 100%, 38%; /* Used for background, buttons and icons */
+  --brand-yellow: 43, 100%, 50%; /* Used to highlight texts, buttons and active states */
 }
 
 /* ----------------- Hide scrollbar ----------------- */
 
 body::-webkit-scrollbar,
-body::-webkit-scrollbar {display: none;} /* Chrome, Safari, Opera */
-body {-ms-overflow-style: none;} /* IE & Edge */
-html {scrollbar-width: none;} /* Firefox */
+body::-webkit-scrollbar {display: none;} 
+body {-ms-overflow-style: none;}
+html {scrollbar-width: none;}
 
 /* ----------------- Reset ----------------- */
 
@@ -61,10 +62,21 @@ html,body{
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--brand-blue);
-  color: var(--white);
+  background-color: hsla(var(--brand-blue), 1);
+  color: hsla(var(--white), 1);
 }
 
 a {
   color: inherit;
 }
+
+button{
+  background: transparent;
+  border: 0px solid hsla(var(--white), 1);
+  cursor: pointer;
+}
+
+/* ----------------- Typography ----------------- */
+
+h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em  {padding: 0; margin: 0; font-style: normal; font-weight: 450; letter-spacing: normal;}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, p:last-child, p.big:last-child, p.small:last-child, a:last-child, strong:last-child  {margin-bottom: 0;}
