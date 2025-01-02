@@ -79,6 +79,10 @@
   align-items: center;
 }
 
+.sidebar__background{
+  background-color: hsla(var(--brand-blue), 0.68);
+}
+
 .share_btn{
   padding: 0.5rem;
   display: flex;
@@ -572,5 +576,100 @@ body:has(.tabs_container) .sidebar .sidebar_header{
 
   & .schedule_time{
     margin-left: auto;
+  }
+}
+
+/* ----------------- Requests page ----------------- */
+.requests_container{
+  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem;
+}
+
+.requests_list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.request_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem; /* 8px */
+  background-color: hsla(var(--white), 1);
+  border-radius: 0.3125rem; /* 5px */
+  overflow: hidden;
+}
+
+.request_info_wrapper{
+  display: flex;
+  flex-direction: row;
+  color: hsla(var(--black), 1);
+  width: 100%;
+  height: 100%;
+}
+
+.request_item_info{
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem;
+  gap: 0.25rem;
+}
+
+.request_item_picture{
+  width: 80px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: stretch;
+
+  & img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.request_item_info .request_item_title{
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsla(var(--black), 1);
+}
+
+.request_item_info .request_item_author{
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsla(var(--black), 0.5);
+}
+
+.request_item_number{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem; /* 10px */
+  color: hsla(var(--white), 1);
+  position: relative;
+  & .request_number_svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 86px;
+    pointer-events: none;
+    z-index: 0;
+    width: 78px;
+
+    & path{
+      fill: hsla(var(--brand-blue), 1);
+    }
+  }
+  & p{
+    position: relative;
+    z-index: 2;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: hsla(var(--white), 1);
+    text-align: center;
+    margin-right: 0.5rem;
   }
 }
