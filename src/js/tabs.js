@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     if (!tabsSections.length) return;
 
     tabsSections.forEach((section) => {
-      const tabBtns = Array.from(section.querySelectorAll(".tab_btn"));
+      const tabBtns = Array.from(section.querySelectorAll("[data-tab-btn]"));
       let activeBtn = section.querySelector("[data-tab-btn].active") || tabBtns[0];
 
       tabBtns.forEach((btn) => {
