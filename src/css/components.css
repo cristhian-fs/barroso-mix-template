@@ -1,12 +1,12 @@
 /* ----------------- Base ----------------- */
 
 .container{
-  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem;
-  margin-bottom: calc(var(--navbar-h, 0) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
+  padding: calc(var(--navbar-h, 0px) + 2.5rem) 1.25rem;
+  margin-bottom: calc(var(--navbar-h, 0px) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
 }
 
 .chat_container{
-  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem;
+  padding: calc(var(--navbar-h, 0px) + 2.5rem) 1.25rem;
   background: hsla(30, 14%, 86%, 1);
   min-height: 100dvh;
   display: flex;
@@ -276,8 +276,8 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   justify-content: center;
   align-items: center;
   /* -navbar-h actually is the height of the navbar + the distance from the top */
-  padding: calc(var(--navbar-h, 0) + 0.5rem) 1.25rem; /* getting the navbar height from js + 20px */
-  margin-bottom: calc(var(--navbar-h, 0) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
+  padding: calc(var(--navbar-h, 0px) + 0.5rem) 1.25rem; /* getting the navbar height from js + 20px */
+  margin-bottom: calc(var(--navbar-h, 0px) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
 }
 
 .home_main_logo{
@@ -496,7 +496,7 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   gap: 0.5rem; /* 12px */
   width: 100%;
   padding-inline: 1.5rem; /* 24px */
-  margin-top: var(--navbar-h, 0);
+  margin-top: var(--navbar-h, 0px);
   color: hsla(var(--white), 1);
   overflow-x: auto;
   overflow-y: hidden;
@@ -606,8 +606,8 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
 
 /* ----------------- Requests page ----------------- */
 .requests_container{
-  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem;
-  margin-bottom: calc(var(--navbar-h, 0) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
+  padding: calc(var(--navbar-h, 0px) + 2.5rem) 1.25rem;
+  margin-bottom: calc(var(--navbar-h, 0px) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
 }
 
 .requests_list{
@@ -766,11 +766,36 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   font-weight: 500;
 }
 
+.send_message_btn{
+  position: fixed;
+  bottom: calc(var(--footer-h, 0px) + 1.25rem);
+  right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* 8px */
+  padding: 1rem; /* 8px 16px */
+  cursor: pointer;
+  background: hsla(var(--brand-blue), 1);
+  color: hsla(var(--white), 1);
+  max-width: fit-content;
+  border: 1px solid hsla(var(--white), 1);
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  & span{
+    font-size: 40px;
+  }
+  
+}
+
 /* ----------------- News page ----------------- */
 
 .news_tabs_container{
   display: inline-flex;
-  margin-top: var(--navbar-h, 0);
+  margin-top: var(--navbar-h, 0px);
   padding-block: 1.125rem;
 }
 
@@ -1183,70 +1208,237 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   padding: 1.5rem;
 
   /* Cabeçalho do formulário */
-.login-form-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: hsla(var(--black), 1);
+  .login-form-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: hsla(var(--black), 1);
+  }
+
+  /* Corpo do formulário */
+  .login-form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Grupo de formulário */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    color: hsla(var(--black), 1);
+  }
+
+  /* Estilização do input */
+  .input {
+    padding: 0.75rem;
+    border: 1px solid hsla(var(--black), 0.2);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .input:focus {
+    border-color: hsla(var(--black), 0.2);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Botão de envio */
+  .button {
+    padding: 0.75rem;
+    background-color: hsla(var(--black), 1);
+    color: hsla(var(--white), 1);
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  .button:hover {
+    background-color: hsla(var(--black), 0.8);
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+
+  /* Hover do input e botão */
+  .input:hover {
+    background-color: hsla(var(--black), 0.02);
+  }
 }
 
-/* Corpo do formulário */
-.login-form-body {
+/* ----------------- Send message form ----------------- */
+
+.send_message_form{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+
+  & .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+    & label{
+      color: hsla(var(--white), 1);
+      font-size: 1rem;
+    }
+    & input, textarea{
+      padding: 0.75rem;
+      width: 100%;
+      border: 1px solid hsla(var(--black), 0.2);
+      border-radius: 0.375rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input:focus, textarea:focus {
+      border-color: hsla(var(--black), 0.2);
+      box-shadow: 0 0 0 3px hsla(var(--black), 0.35);
+    }
+
+    & input::placeholder{
+      color: hsla(var(--black), 0.36);
+      font-weight: 700;
+      font-size: 0.9375rem;
+    }
+  }
+
+  & .form_group_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    & .form-group{
+      grid-column: span 1 / span 1;
+      max-width: fit-content;
+    }
+  } 
+
+  /* Botão de envio */
+  button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: hsla(var(--brand-blue), 1);
+    color: hsla(var(--white), 1);
+    border: 1px solid hsla(var(--white), 1);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    max-width: 100%;
+    align-self: flex-end;
+    min-width: 240px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    & span{
+      font-size: 1rem;
+    }
+    & .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    }
+  }
+
+  button[type="submit"]:hover {
+    background-color: color-mix(in hsl, hsla(var(--brand-blue), 1), black 20%);
+  }
+
+  button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+
+  /* handling error states */
+  .error-message {
+    color: hsla(0, 97%, 57%, 1);
+    font-size: 0.875rem;
+    display: none;
+  }
+  
+  input.invalid {
+    border-color: hsla(0, 97%, 57%, 1);
+    color: hsla(0, 97%, 57%, 1);
+  }
+  input.invalid::placeholder{
+    color: hsla(0, 97%, 57%, 1);
+  }
+  
+  input.valid {
+    border-color: hsla(var(--brand-yellow), 1);
+  }
 }
 
-/* Grupo de formulário */
-.form-group {
-  display: flex;
+#form_answer_dialog{
+  display: none;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-size: 0.875rem;
-  color: hsla(var(--black), 1);
-}
-
-/* Estilização do input */
-.input {
-  padding: 0.75rem;
-  border: 1px solid hsla(var(--black), 0.2);
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input:focus {
-  border-color: hsla(var(--black), 0.2);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-}
-
-/* Botão de envio */
-.button {
-  padding: 0.75rem;
-  background-color: hsla(var(--black), 1);
-  color: hsla(var(--white), 1);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  width: 100dvw;
+  height: 100dvh;
   border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
+  background: hsla(var(--black), 0.78);
+  padding: 1rem;
+
+  max-width: 100dvw;
+  max-height: 100dvh;
+
+  & .dialog_container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    max-height: fit-content;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    background-color: hsla(var(--white), 1);
+    color: hsla(var(--black), 1);
+
+    & #dialog_title{
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+    & #dialog_description{
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    & #dialog_close_btn{
+      padding: 0.75rem 1.5rem;
+      background-color: hsla(var(--brand-blue), 1);
+      color: hsla(var(--white), 1);
+      border: 1px solid hsla(var(--white), 1);
+      border-radius: 0.375rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      width: 100%;
+    }
+
+    & #dialog_close_btn.is_error{
+      background-color: hsla(0, 97%, 57%, 1);
+    }
+  }
 }
 
-.button:hover {
-  background-color: hsla(var(--black), 0.8);
-}
-
-.button:active {
-  transform: scale(0.98);
-}
-
-/* Hover do input e botão */
-.input:hover {
-  background-color: hsla(var(--black), 0.02);
-}
-
+#form_answer_dialog[open]{
+  display: flex;
 }
