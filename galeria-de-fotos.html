@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de fotos</title>
+
+  <!-- ---------------- CSS --------------- -->
+  <link rel="stylesheet" href="./src/css/normalize.css">
+  <link rel="stylesheet" href="./src/css/styleguide.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  
+  <!-- ---------------- JS --------------- -->
+  <script src="./src/js/svg-inject.min.js"></script>
+</head>
+<body> 
+  <nav class="sidebar" aria-label="Navegação principal">
+    <div class="sidebar_header sidebar__background">
+      <label class="burger" for="burger" id="sidebar_burger_btn" aria-label="Abrir menu de navegação">
+        <input type="checkbox" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <p class="sidebar_page_title">Galeria de fotos</p>
+      <button class="share_btn">
+        <img src="./src/assets/svg/share_icon.svg" onload="SVGInject(this)" alt="">
+      </button>
+    </div>
+    <div class="sidebar_navigation_wrapper" data-state="closed">
+      <div class="sidebar_overlay" aria-hidden="true"></div>
+      <div class="sidebar_navigation">
+        <img src="./src/assets/img/logo-barroso-mix-sm.png" class="sidebar_logo" alt="Logo Barroso Mix">
+        <ul class="sidebar_navigation_list">
+          <li>
+            <a href="/" aria-current="page" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/radio_line.svg" onload="SVGInject(this)">
+                <p>Home</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/document_line.svg" onload="SVGInject(this)">
+                <p>Programação</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/music_fill.svg" onload="SVGInject(this)">
+                <p>As mais pedidas</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/message_line.svg" onload="SVGInject(this)">
+                <p>Mural de recados</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/mdi_chat_fill.svg" onload="SVGInject(this)">
+                <p>Chat</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/noticias_fill.svg" onload="SVGInject(this)">
+                <p>Notícias</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/eventos_line.svg" onload="SVGInject(this)">
+                <p>Eventos</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/equipe_fill.svg" onload="SVGInject(this)">
+                <p>Equipe</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/galeria-fotos_line.svg" onload="SVGInject(this)">
+                <p>Galeria de fotos</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/promocoes_fill.svg" onload="SVGInject(this)">
+                <p>Promoções</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/sobre_line.svg" onload="SVGInject(this)">
+                <p>Sobre o aplicativo</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_social_links">
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/instagram_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li><a href="/" class="sidebar_social_link">
+            <img src="./src/assets/svg/tiktok_line.svg" onload="SVGInject(this)">
+          </a></li>
+          <li><a href="/" class="sidebar_social_link">
+            <img src="./src/assets/svg/youtube_line.svg" onload="SVGInject(this)">
+          </a></li>
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/admin-site_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/line-horizontal-dots-20_filled.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="home_background">
+    <section class="container">
+      <div class="gallery_list">
+        <div class="gallery_card">
+          <div class="gallery_image">
+            <img src="./src/assets/img/gallery_card_image.jpg" alt="Imagem da galeria">
+          </div>
+          <div class="gallery_content">
+            <h3 class="gallery_title">
+              Foto final de ano
+            </h3>
+            <div class="gallery_date">
+              <span class="material-symbols-outlined">
+                schedule
+              </span>
+              <p>30 dez de 2024 às 09:20</p>
+            </div>
+            <a href="" class="gallery_link">
+              Confira em nosso site
+              <span class="material-symbols-outlined">
+                call_made
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="gallery_card">
+          <div class="gallery_image">
+            <img src="./src/assets/img/gallery_card_image.jpg" alt="Imagem da galeria">
+          </div>
+          <div class="gallery_content">
+            <h3 class="gallery_title">
+              Foto final de ano
+            </h3>
+            <div class="gallery_date">
+              <span class="material-symbols-outlined">
+                schedule
+              </span>
+              <p>30 dez de 2024 às 09:20</p>
+            </div>
+            <a href="" class="gallery_link">
+              Confira em nosso site
+              <span class="material-symbols-outlined">
+                call_made
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="gallery_card">
+          <div class="gallery_image">
+            <img src="./src/assets/img/gallery_card_image.jpg" alt="Imagem da galeria">
+          </div>
+          <div class="gallery_content">
+            <h3 class="gallery_title">
+              Foto final de ano
+            </h3>
+            <div class="gallery_date">
+              <span class="material-symbols-outlined">
+                schedule
+              </span>
+              <p>30 dez de 2024 às 09:20</p>
+            </div>
+            <a href="" class="gallery_link">
+              Confira em nosso site
+              <span class="material-symbols-outlined">
+                call_made
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="music_player" aria-label="Player de música">
+    <div class="music_info_wrapper">
+      <figure class="music_info">
+        <div class="music_album_picture">
+          <img src="./src/assets/img/album_picture.jpg" class="" alt="Foto do album">
+        </div>
+        <figcaption>
+          <p class="music_status">Tocando agora</p>
+          <p class="music_name">
+            Terco Mariano - Misterios Dolorosos - Terca e Sexta Feira
+          </p>
+        </figcaption>
+      </figure>
+      <button class="music_play_btn">
+        <img src="./src/assets/svg/pause-icon_fill.svg" onload="SVGInject(this)" alt="">
+      </button>
+    </div>
+    <div class="adversing_wrapper">
+
+    </div>
+  </footer>
+  
+  <script src="./src/js/index.js"></script>
+</body>
+</html>
