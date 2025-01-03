@@ -34,8 +34,20 @@ function setNavbarHeightStyle(){
   document.documentElement.style.setProperty('--navbar-h', `${navbarHeight.height + navbarHeight.top}px`);
 }
 
+function getFooterHeight(){
+  return document.querySelector('.music_player').getBoundingClientRect().height;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   setNavbarHeightStyle();
-  initNavbar()
+  initNavbar();
+
+  function setChatBtnPosition(){
+    const chatBtn = document.querySelector(".send_message_btn");
+    if(!chatBtn) return;
+
+    chatBtn.style.setProperty('--footer-h', `${getFooterHeight()}px`);
+  }
+  setChatBtnPosition();
 });
