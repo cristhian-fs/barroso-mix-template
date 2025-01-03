@@ -5,6 +5,16 @@
   margin-bottom: calc(var(--navbar-h, 0) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
 }
 
+.chat_container{
+  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem;
+  background: hsla(30, 14%, 86%, 1);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ----------------- Hamburger menu ----------------- */
 
 .burger {
@@ -87,7 +97,7 @@
 }
 
 .sidebar__background{
-  background-color: hsla(var(--brand-blue), 0.68);
+  background-color: hsla(var(--brand-blue), 1);
 }
 
 .share_btn{
@@ -255,18 +265,29 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   min-height: 100dvh;
 }
 
+.home_container{
+  width: 100%;
+}
+
 .home_content{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* -navbar-h actually is the height of the navbar + the distance from the top */
-  padding: calc(var(--navbar-h, 0) + 2.5rem) 1.25rem; /* getting the navbar height from js + 20px */
+  padding: calc(var(--navbar-h, 0) + 0.5rem) 1.25rem; /* getting the navbar height from js + 20px */
   margin-bottom: calc(var(--navbar-h, 0) + 2.5rem); /* as the footer is fixed, the margin-bottom is the same as the footer height to avoid overlapping or content hiding */
 }
 
 .home_main_logo{
   max-width: 248px;
+}
+
+@media screen and (max-width: 375px){
+  .home_main_logo{
+    max-width: 145px;
+  }
 }
 
 .home_infos{
@@ -319,6 +340,7 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   justify-content: center;
   gap: 0.75rem; /* 12px */
   margin-top: 2.5rem; /* 40px */
+  flex-wrap: wrap;
 }
 
 .home_action_btn{
@@ -393,14 +415,17 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsla(var(--black), 1);
+  box-shadow: inset 0px 0px 0px 5px hsla(var(--black), 0.05);
   padding: 1rem; /* 16px */
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  & svg{
-    width: 24px;
-    height: 24px;
+  & .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
   }
 }
 
@@ -1053,4 +1078,175 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
       }
     }
   }
+}
+
+/* ----------------- Promotion page ----------------- */
+
+.promotion_list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.promotion_card{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  background: hsla(var(--white), 1);
+  overflow: hidden;
+  & .promotion_image{
+    width: 100%;
+    max-width: 100%;
+    max-height: 143px;
+    overflow: hidden;
+    flex-shrink: 0;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .promotion_content{
+    padding: 0.75rem 1rem;
+    & .promotion_title{
+      font-weight: 700;
+      color: hsla(var(--black), 1);
+      font-size: 1rem; /* 16px */
+    }
+
+    & .promotion_description{
+      font-weight: 500;
+      color: hsla(var(--black), 0.5);
+      font-size: 0.9375rem; /* 16px */
+      margin-top: 0.25rem;
+    }
+
+    & .promotion_link{
+      margin-top: 1rem;
+      color: hsla(var(--black), 1);
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.25rem;
+
+      & span{
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+/* ----------------- About page ----------------- */
+
+.about_card{
+  border-radius: 0.625rem;
+  background-color: hsla(var(--white), 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+  & .about_logo{
+    width: 100%;
+    max-width: 129px;
+  }
+
+  & .about_title{
+    color: hsla(var(--black), 0.77);
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    text-align: center;
+  }
+
+  & .about_sec_logo{
+    width: 100%;
+    max-width: 145px;
+  }
+}
+
+/* ----------------- Chat page ----------------- */
+
+/* Container do formulário */
+.login-form {
+  --button-text: #fff;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin: auto;
+  background: hsla(var(--white), 1);
+  border-radius: 0.375rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+
+  /* Cabeçalho do formulário */
+.login-form-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: hsla(var(--black), 1);
+}
+
+/* Corpo do formulário */
+.login-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Grupo de formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: hsla(var(--black), 1);
+}
+
+/* Estilização do input */
+.input {
+  padding: 0.75rem;
+  border: 1px solid hsla(var(--black), 0.2);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: hsla(var(--black), 0.2);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Botão de envio */
+.button {
+  padding: 0.75rem;
+  background-color: hsla(var(--black), 1);
+  color: hsla(var(--white), 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.button:hover {
+  background-color: hsla(var(--black), 0.8);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Hover do input e botão */
+.input:hover {
+  background-color: hsla(var(--black), 0.02);
+}
+
 }
