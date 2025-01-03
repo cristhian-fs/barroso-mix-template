@@ -35,19 +35,15 @@ function setNavbarHeightStyle(){
 }
 
 function getFooterHeight(){
-  return document.querySelector('.music_player').getBoundingClientRect().height;
+  
+  const footerHeight = document.querySelector('.music_player').getBoundingClientRect().height;
+
+  return document.documentElement.style.setProperty('--footer-h', `${footerHeight}px`);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
   setNavbarHeightStyle();
   initNavbar();
-
-  function setChatBtnPosition(){
-    const chatBtn = document.querySelector(".send_message_btn");
-    if(!chatBtn) return;
-
-    chatBtn.style.setProperty('--footer-h', `${getFooterHeight()}px`);
-  }
-  setChatBtnPosition();
+  getFooterHeight();
 });
