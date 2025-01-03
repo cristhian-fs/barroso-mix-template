@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar recado</title>
+
+  <!-- ---------------- CSS --------------- -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./src/css/normalize.css">
+  <link rel="stylesheet" href="./src/css/styleguide.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  
+  <!-- ---------------- JS --------------- -->
+  <script src="./src/js/svg-inject.min.js"></script>
+</head>
+<body>
+  
+  <nav class="sidebar" aria-label="Navegação principal">
+    <div class="sidebar_header sidebar__background">
+      <a href="/mural-de-recados.html">
+        <span class="material-symbols-outlined">
+          arrow_left_alt
+        </span>
+      </a>
+      <p class="sidebar_page_title">Enviar recado</p>
+      <button class="share_btn">
+        <img src="./src/assets/svg/share_icon.svg" onload="SVGInject(this)" alt="">
+      </button>
+    </div>
+    <div class="sidebar_navigation_wrapper" data-state="closed">
+      <div class="sidebar_overlay" aria-hidden="true"></div>
+      <div class="sidebar_navigation">
+        <img src="./src/assets/img/logo-barroso-mix-sm.png" class="sidebar_logo" alt="Logo Barroso Mix">
+        <ul class="sidebar_navigation_list">
+          <li>
+            <a href="/" aria-current="page" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/radio_line.svg" onload="SVGInject(this)">
+                <p>Home</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/programação.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/document_line.svg" onload="SVGInject(this)">
+                <p>Programação</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/mais-pedidas.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/music_fill.svg" onload="SVGInject(this)">
+                <p>As mais pedidas</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/mural-de-recados.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/message_line.svg" onload="SVGInject(this)">
+                <p>Mural de recados</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/chat.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/mdi_chat_fill.svg" onload="SVGInject(this)">
+                <p>Chat</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/noticias.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/noticias_fill.svg" onload="SVGInject(this)">
+                <p>Notícias</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/eventos.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/eventos_line.svg" onload="SVGInject(this)">
+                <p>Eventos</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/equipe.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/equipe_fill.svg" onload="SVGInject(this)">
+                <p>Equipe</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/galeria-de-fotos.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/galeria-fotos_line.svg" onload="SVGInject(this)">
+                <p>Galeria de fotos</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/promocoes.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/promocoes_fill.svg" onload="SVGInject(this)">
+                <p>Promoções</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/sobre-o-aplicativo.html" class="sidebar_navigation_item">
+              <div class="sidebar_navigation_item_inner">
+                <img src="./src/assets/svg/sobre_line.svg" onload="SVGInject(this)">
+                <p>Sobre o aplicativo</p>
+              </div>
+              <img src="./src/assets/svg/chevron-right_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_social_links">
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/instagram_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li><a href="/" class="sidebar_social_link">
+            <img src="./src/assets/svg/tiktok_line.svg" onload="SVGInject(this)">
+          </a></li>
+          <li><a href="/" class="sidebar_social_link">
+            <img src="./src/assets/svg/youtube_line.svg" onload="SVGInject(this)">
+          </a></li>
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/admin-site_line.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="sidebar_social_link">
+              <img src="./src/assets/svg/line-horizontal-dots-20_filled.svg" onload="SVGInject(this)">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="home_background">
+    <section class="container">
+      <form class="send_message_form">
+        <div class="form-group">
+          <label for="username">Seu nome</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Seu nome"
+            required minlength="3"
+            class="input"
+          />
+          <span class="error_message"></span>
+        </div>
+        <div class="form-group">
+          <label for="username">Seu email</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Seu email"
+            required
+            class="input"
+          />
+          <span class="error_message"></span>
+        </div>
+        <div class="form_group_grid">
+          <div class="form-group">
+            <label for="username">Cidade</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Cidade"
+              required minlength="3"
+              class="input"
+            />
+            <span class="error_message"></span>
+          </div>
+          <div class="form-group">
+            <label for="username">Estado</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Estado"
+              required minlength="2"
+              class="input"
+            />
+            <span class="error_message"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="username">Mensagem</label>
+          <textarea
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Digite sua mensagem"
+            required minlength="3"
+            class="input"></textarea>
+            <span class="error_message"></span>
+        </div>
+        <button type="submit" class="button">
+          <span class="material-symbols-outlined">
+            send
+          </span>
+          <p class="send_message">Enviar</p>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="music_player" aria-label="Player de música">
+    <div class="music_info_wrapper">
+      <figure class="music_info">
+        <div class="music_album_picture">
+          <img src="./src/assets/img/album_picture.jpg" class="" alt="Foto do album">
+        </div>
+        <figcaption>
+          <p class="music_status">Tocando agora</p>
+          <p class="music_name">
+            Terco Mariano - Misterios Dolorosos - Terca e Sexta Feira
+          </p>
+        </figcaption>
+      </figure>
+      <button class="music_play_btn">
+        <span class="material-symbols-outlined">
+          pause
+        </span>
+      </button>
+    </div>
+    <div class="adversing_wrapper">
+
+    </div>
+  </footer>
+
+  <dialog id="form_answer_dialog" aria-labelledby="Dialogo de resposta" aria-describedby="Identifica se o formulário foi enviado com sucesso ou não">
+    <div class="dialog_container">
+      <p id="dialog_title">🎉</p>
+      <p id="dialog_message">Seu recado foi enviado com sucesso!</p>
+      <button id="dialog_close_btn">Ok</button>
+    </div>
+  </dialog>
+
+  <script src="./src/js/index.js"></script>
+  <script src="./src/js/form.js"></script>
+</body>
+</html>
