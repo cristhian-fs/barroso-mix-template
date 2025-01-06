@@ -420,6 +420,11 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   flex-wrap: wrap;
 }
 
+.home_buttons a{
+  text-decoration: none;
+  width: 100%;
+}
+
 .home_action_btn{
   display: flex;
   flex-direction: column;
@@ -432,6 +437,7 @@ body:has(.sidebar_navigation_wrapper[data-state="open"]) {
   color: hsla(var(--color1), 1);
   font-size: 0.75rem; /* 12px */
   font-weight: 600;
+  width: 100%;
 
   transition: all 0.15s ease-in-out;
   & svg{
