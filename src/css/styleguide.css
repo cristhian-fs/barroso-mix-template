@@ -15,10 +15,10 @@
 
 :root{
   /* hsl pure values for all of them */
-  --white: 0, 0%, 100%; /* Used for background, texts and icons*/
-  --black: 0, 0%, 0%; /* Used for texts, button backgrounds and texts  */
-  --brand-blue: 203, 100%, 38%; /* Used for background, buttons and icons */
-  --brand-yellow: 43, 100%, 50%; /* Used to highlight texts, buttons and active states */
+  --color1: 0, 0%, 100%; /* Used for background, texts and icons*/
+  --color2: 0, 0%, 0%; /* Used for texts, button backgrounds and texts  */
+  --color3: 203, 100%, 38%; /* Used for background, buttons and icons */
+  --color4: 43, 100%, 50%; /* Used to highlight texts, buttons and active states */
 }
 
 /* ----------------- Hide scrollbar ----------------- */
@@ -73,8 +73,8 @@ html,body{
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: hsla(var(--brand-blue), 1);
-  color: hsla(var(--white), 1);
+  background-color: hsla(var(--color3), 1);
+  color: hsla(var(--color1), 1);
 }
 
 a {
@@ -83,7 +83,7 @@ a {
 
 button{
   background: transparent;
-  border: 0px solid hsla(var(--white), 1);
+  border: 0px solid hsla(var(--color1), 1);
   cursor: pointer;
 }
 
