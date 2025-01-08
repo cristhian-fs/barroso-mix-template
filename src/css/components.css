@@ -9,8 +9,8 @@
 
 .chat_container{
   padding: calc(var(--navbar-h, 0px) + 2.5rem) 1.25rem;
-  background: hsla(30, 14%, 86%, 1);
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
